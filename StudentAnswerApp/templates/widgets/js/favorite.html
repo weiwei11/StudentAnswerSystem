@@ -1,0 +1,21 @@
+<script>
+    $(function () {
+        $("a.favorite").click(function () {
+            var favorite;
+            var ch = $(this).children("i");
+            if (ch.hasClass("fa-star-o")) {
+                favorite = 1;
+                ch.removeClass("fa-star-o");
+                ch.addClass("fa-star");
+            } else {
+                favorite = 0;
+                ch.removeClass("fa-star");
+                ch.addClass("fa-star-o");
+            }
+            $.get("{% url 'saa:favorite_mark' %}", {
+                "id": $(this).attr("id"),
+                "mark": favorite
+            });
+        });
+    });
+</script>

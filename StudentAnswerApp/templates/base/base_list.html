@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+{% load i18n bootstrap3 %}
+
+{#{% block nav-link-classes %}active{% endblock %}#}
+{% block content %}
+    <section>
+        <div class="row">
+
+            {% if obj_list %}
+                {% for obj in obj_list %}
+                    <div class="col-lg-6">
+                        {% block list-item-content %}
+
+                        {% endblock %}
+                    </div>
+                {% empty %}
+                    {% block list-empty %}
+
+                    {% endblock %}
+                {% endfor %}
+            {% else %}
+                {% block list-none %}
+
+                {% endblock %}
+            {% endif %}
+
+        </div>
+        {% bootstrap_pagination page_obj %}
+        {#        {% if is_paginated %}#}
+        {#            <div class="pagination">#}
+        {#        <span class="page-links">#}
+        {#            {% if page_obj.has_previous %}#}
+        {#                <a href="{% url 'saa:favorite' page=page_obj.previous_page_number %}">上一页</a>#}
+        {#            {% endif %}#}
+        {#            {% if page_obj.has_next %}#}
+        {#                <a href="{% url 'saa:favorite' page=page_obj.next_page_number %}">下一页</a>#}
+        {#            {% endif %}#}
+        {#            <span class="page-current">#}
+        {#                第{{ page_obj.number }}页 ，工{{ page_obj.paginator.num_pages }}页。#}
+        {#            </span>#}
+        {#        </span>#}
+        {#            </div>#}
+        {#        {% endif %}#}
+    </section>
+{% endblock %}

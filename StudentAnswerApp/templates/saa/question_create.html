@@ -1,0 +1,106 @@
+{% extends 'base/base.html' %}
+{% load i18n static crispy_forms_tags bootstrap3 formset_tags %}
+
+{% block title %}{% trans 'Create question' %}{% endblock %}
+
+{% block extrastyle %}
+{#    <link href="{% static 'saa/assets/bootstrap-multiselect/css/bootstrap-multiselect.css' %}" rel="stylesheet"#}
+{#          type="text/css"/>#}
+    {{ question.media.css }}
+{% endblock %}
+{% block content %}
+    <section class="panel" xmlns="http://www.w3.org/1999/html">
+        <header class="panel-heading">
+            <h3>{% trans 'Question create' %}</h3>
+        </header>
+        <div class="panel-body">
+            <form class="form-horizontal tasi-form" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <h4 class="text-primary" style="margin-left: 15px">{% trans 'Whole description' %}</h4>
+                    <div class="">
+{#                        {{ question.as_p }}#}
+                        {% bootstrap_field question.content_description form_group_class='' layout='horizontal' horizontal_label_class='col-md-2' horizontal_field_class='col-md-10' %}
+{#                        {% bootstrap_field question.accessible_groups form_group_class='' field_class='selectdiv col-md-10' layout='horizontal' horizontal_label_class='col-md-2' horizontal_field_class='col-md-10' %}#}
+                        {% bootstrap_field question.share_classes form_group_class='' field_class='selectdiv col-md-10' layout='horizontal' horizontal_label_class='col-md-2' horizontal_field_class='col-md-10' %}
+                        {% bootstrap_field question.tags form_group_class='' layout='horizontal' horizontal_label_class='col-md-2' horizontal_field_class='col-md-10' %}
+                    </div>
+                </div>
+                <div id="formset" data-formset-prefix="{{ sub_questions.prefix }}">
+                    {{ sub_questions.management_form }}
+                    {{ sub_answers.management_form }}
+
+                    <div data-formset-body>
+                        <!-- New forms will be inserted in here -->
+                        {% for sub_question, sub_answer in sub_questions_and_answers %}
+                            {% include 'widgets/sub_question_and_answer_form.html' with sub_question=sub_question sub_answer=sub_answer %}
+                        {% endfor %}
+                    </div>
+
+                    <!-- The empty form template. By wrapping this in a <script> tag, the
+                    __prefix__ placeholder can easily be replaced in both attributes and
+                    any scripts -->
+                    <script type="form-template" data-formset-empty-form>
+                        {% escapescript %}
+                            {% include 'widgets/sub_question_and_answer_form.html' with sub_question=sub_questions.empty_form sub_answer=sub_answers.empty_form %}
+                        {% endescapescript %}
+                    </script>
+                    {% buttons %}
+                        <!-- This button will add a new form when clicked -->
+                        <input type="button" value="{% trans 'Add another' %}" data-formset-add
+                               class="btn btn-info btn-block">
+                    {% endbuttons %}
+                    {% buttons %}
+                        <input type="submit" value="{% trans 'Create' %}" class="btn btn-primary pull-right"
+                               style="margin-right: 15px" onkeydown="if(event.keyCode==13)return false;">
+                    {% endbuttons %}
+                </div>
+                {#                <div class="form-group">#}
+
+                {#                </div>#}
+
+            </form>
+        </div>
+    </section>
+{% endblock %}
+
+{% block extrajs %}
+{#    <script src="{% static 'saa/assets/bootstrap-multiselect/js/bootstrap-multiselect.js' %}"></script>#}
+    {{ block.super }}
+    {{ question.media.js }}
+    <script>
+        jQuery(function ($) {
+            $("#formset").formset({
+                'animateForms': true,
+                'reorderMode': 'animate'
+            }).on('formAdded', function (event) {
+                console.log("Form added", this, arguments);
+            }).on('formDeleted', function (event) {
+                console.log("Form deleted", this, arguments);
+            });
+
+            // extend custom js
+            $("input[data-formset-add]").click(function () {
+                $("#id_sub_answers-TOTAL_FORMS").val($("#id_sub_questions-TOTAL_FORMS").val());
+            });
+
+{#            $(".selectdiv select").addClass("multiselect");#}
+{##}
+{#            $(".multiselect").multiselect({#}
+{#                buttonWidth: "100%",#}
+{#                maxHeight: 200,#}
+{#                buttonClass: "btn btn-white",#}
+{#                includeSelectAllOption: true,#}
+{#                enableFiltering: true,#}
+{#                templates: {#}
+                    {#                    button: '<button type="button" class="multiselect dropdown-toggle btn btn-info" data-toggle="dropdown"></button>',#}
+{#                    filterClearBtn: '<span class="input-group-btn"><button class="btn multiselect-clear-filter" type="button"><i class="glyphicon glyphicon-remove-circle"></i></button></span>',#}
+{#                    ul: '<ul class="multiselect-container dropdown-menu"></ul>',#}
+{#                    li: '<li><a href="javascript:void(0);"><label></label></a></li>',#}
+{#                }#}
+{##}
+{#            });#}
+        });
+    </script>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% load i18n %}
+
+<div class="panel">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                {% trans 'Sub Question' %} {{ sub_question.order_number }}
+            </a>
+        </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+            <p>{{ sub_question.content }}</p>
+        </div>
+    </div>
+</div>

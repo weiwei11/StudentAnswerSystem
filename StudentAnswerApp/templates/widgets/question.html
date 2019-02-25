@@ -1,0 +1,44 @@
+{% extends 'base/base_panel.html' %}
+{% load i18n extend_filters tagging_tags %}
+
+{% block panel-heading %}
+    <strong class="pull-right">{{ question | render_creator_and_date_time }}</strong>
+    <h4 class=""><a href="{% url 'saa:question_detail' question.id %}">No.{{ question.id }}</a>
+        <a id="{{ question.id }}" class="favorite">
+            {% if user in question.favorite_users.all %}
+                <i class="fa fa-star"></i>
+            {% else %}
+                <i class="fa fa-star-o"></i>
+            {% endif %}
+        </a>
+    </h4>
+
+{% endblock %}
+{% block panel-body %}
+    <div class="">{{ question.content_description | safe }}</div>
+    <hr>
+    <ul class="list-inline">
+        <li>{% trans 'Share Classes' %} :</li>
+        {% for class in question.share_classes.all %}
+            <li>
+                {{ class.name }}
+            </li>
+        {% endfor %}
+    </ul>
+    <p>{% trans 'Sub Question Sum' %} : {{ question.sub_questions.all.count }}</p>
+    <p>{% trans 'User Favorite Total' %} : {{ question.favorite_users.all.count }}</p>
+    <hr>
+    <div class="pull-right">
+        {% if question.sub_questions.all.0.standard_answer.belong_to_answer.id %}
+            <a href="{% url 'saa:question_and_answer' question.id question.sub_questions.all.0.standard_answer.belong_to_answer.id %}"
+               class="btn btn-success btn-round btn-xs">
+                <i class="fa fa-eye"></i> {% trans 'standard answer' %}</a>
+        {% endif %}
+        <a href="{% url 'saa:answer_for_question' question.id %}" class="btn btn-success btn-round btn-xs">
+            <i class="fa fa-eye"></i> {% trans 'my answer' %}</a>
+        <a href="{% url 'saa:answer_create' question.id %}"
+           class="btn btn-info btn-round btn-xs">
+            <i class="fa fa-plus-circle"></i> {% trans 'add answer' %}</a>
+    </div>
+    {% include 'widgets/tags.html' with tags_object=question %}
+{% endblock %}

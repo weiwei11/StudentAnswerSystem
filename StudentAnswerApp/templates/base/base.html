@@ -1,0 +1,114 @@
+{% load i18n static notifications_tags avatar_tags bootstrap3 %}
+<!DOCTYPE html>
+
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+
+<head>
+    <!-- 通用模板信息 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        {% block title %}{{ title }}{% endblock %}
+    </title>
+
+    {% include 'widgets/css_link.html' %}
+    {% block extrastyle %}{% endblock %}
+    {#    {% if LANGUAGE_BIDI %}#}
+    {#        <link rel="stylesheet" type="text/css"#}
+    {#              href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}"/>#}
+    {#    {% endif %}#}
+    {% block extrahead %}{% endblock %}
+
+    <!-- to support IE8 -->
+    <!-- [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
+
+    {% block blockbots %}
+        <meta name="robots" content="NONE,NOARCHIVE"/>
+    {% endblock %}
+</head>
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
+      data-admin-utc-offset="{% now "Z" %}">
+
+<!-- Container -->
+<section id="container" class="">
+
+    {% if not is_popup %}
+        <!-- Header -->
+        {% block navbar %}
+            {% include 'widgets/navbar.html' %}
+        {% endblock %}
+        <!-- END Header -->
+        {#        {% include 'widgets/header.html' %}#}
+    {% endif %}
+    {% block nav-siderbar %}
+        {% include 'widgets/nav_siderbar.html' %}
+    {% endblock %}
+    <section id="main-content">
+        <section class="wrapper">
+            {#            <div class="container-fluid">#}
+            <!-- Content -->
+            {#                <div class="row-fluid {% block coltype %}colM{% endblock %}">#}
+
+            <!-- end sidebar -->
+            <div class="main">
+                <div class="collapse" id="collapsefilter">
+                    <div class="panel">
+                        {% block filter %}
+                            {% if filter.form %}
+                            <header class="panel-heading">{% trans 'search' %}</header>
+                            <div class="panel-body">
+                                <form action="{% block filter-action %}{% endblock %}" method="get">
+                                    {% bootstrap_form filter.form layout='horizontal' size='sm' %}
+                                    {% buttons %}
+                                        <input type="submit" value="{% trans 'search' %}"
+                                               class="btn btn-info pull-right"
+                                               style="margin-right: 15px">
+                                    {% endbuttons %}
+                                </form>
+                            </div>
+                            {% endif %}
+                        {% endblock %}
+                    </div>
+                </div>
+
+                {% block content_pretitle %}{% endblock %}
+                {% block content_title %}
+                    {% if title %}
+                        <h1>{{ content_title }}</h1>
+                    {% endif %}
+                    {#                            <div class="page-header">#}
+                    {#                                <h2>{% block content_title_h %}{% endblock %}</h2>#}
+                    {#                            </div>#}
+                {% endblock %}
+                {% block messages %}
+                    {% include 'widgets/message.html' %}
+                {% endblock messages %}
+                <!-- end message -->
+                {% block content %}
+                    {% block object-tools %}{% endblock %}
+                    {{ content }}
+                {% endblock %}
+                <br class="clear"/>
+
+            </div> <!-- end main -->
+            {#                </div> <!-- END Content -->#}
+            {#            </div> <!-- /container -->#}
+        </section>
+    </section>
+    {% block footer %}
+        {% include 'widgets/footer.html' %}
+    {% endblock %}
+    <div id="bottom"></div>
+</section> <!-- END Container -->
+
+{% include 'widgets/script.html' %}
+{% block extrajs %}{% endblock %}
+</body>
+</html>

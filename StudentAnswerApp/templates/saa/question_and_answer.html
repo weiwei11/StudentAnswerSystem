@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <div class="panel-group panelm-bot20" id="accordion">
+        {% include 'widgets/question.html' %}
+        {% for sub_question, sub_answer in sub_questions_and_answers %}
+            {% include 'widgets/sub_question_and_answer.html' with sub_question=sub_question sub_answer=sub_answer %}
+        {% endfor %}
+    </div>
+{% endblock %}

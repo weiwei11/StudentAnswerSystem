@@ -1,0 +1,69 @@
+{% extends 'base/base_form.html' %}
+{% load i18n crispy_forms_tags avatar_tags %}
+
+{% block title %}
+    {% trans 'User Information' %}
+{% endblock %}
+{% block messages %}
+    {% if form.error %}
+        <p class="well">{{ form.error }}</p>
+    {% endif %}
+
+{% endblock %}
+{% block form-heading %}
+    <h4>{% trans 'Profile' %}
+{% endblock %}
+{% if form %}
+    {% block form-action %}{% url 'saa:user_information' %}{% endblock %}
+    {% block form-extra-attr %}enctype="multipart/form-data"{% endblock %}
+    {% block form-content %}
+        {% avatar user 80 %}
+        <a class="" href="{% url 'avatar_change' %}">{% trans 'Change your avatar' %}</a>
+        {#        <a class="btn" data-toggle="modal" href="#id_avatar_modal" data-keyboard="false" data-backdrop="false">点击"无ESC关闭，无遮蔽背景"演示</a>#}
+        {{ form | crispy }}
+        {{ user_information | crispy }}
+        <input type="submit" value="{% trans 'save' %}" class="btn btn-primary btn-block">
+    {% endblock %}
+{% endif %}
+
+
+{#{% block form-heading-content %}{% trans 'User information' %}{% endblock %}#}
+{#    {% if formsettree %}#}
+{#    <table>#}
+{#    {%for one_of_root in formsettree%}#}
+{#        {{ one_of_root.current_form }}#}
+{#        {% for formsettree_child in one_of_root.formsettree_childs %}#}
+{#            {% for one_of_formsettree_child in formsettree_child %}#}
+{#                {{ one_of_formsettree_child.current_form }}#}
+{#            {% endfor %}#}
+{#        {% endfor %}#}
+{#    {%endfor%}#}
+{#    </table>#}
+{#    {%else%}#}
+{#        <p>No view image</p>#}
+{#    {%endif%}#}
+{#{% if formsetlist %}#}
+{#    {% block form-action %}{% url 'saa:user_information' %}{% endblock %}#}
+{#    {% block form-extra-attr %}enctype="multipart/form-data"{% endblock %}#}
+{#    {% block form-content %}#}
+{#        {% for form in formlist %}#}
+{#            {{ form.management_form }}#}
+{#            {{ form.as_table }}#}
+{#        {% endfor %}#}
+{#        {% avatar user 80 %}#}
+{#        <a class="" href="{% url 'avatar_change' %}">{% trans 'Change your avatar' %}</a>#}
+{#        <a class="btn" data-toggle="modal" href="#id_avatar_modal" data-keyboard="false" data-backdrop="false">点击"无ESC关闭，无遮蔽背景"演示</a>#}
+{##}
+{##}
+{#        {{ formsetlist.0.management_form }}#}
+{#        {{ formsetlist.0 | crispy }}#}
+{#        {{ formsetlist.1.management_form }}#}
+{#        {{ formsetlist.1 | crispy }}#}
+{#        <img src="{{ formsetlist.1.0.instance.head_portrait.url }}">#}
+{#        <input type="submit" value="{% trans 'save' %}" class="btn btn-primary btn-block">#}
+{#    {% endblock %}#}
+{#    {% block extra-content %}#}
+{#        {% include 'saa/change.html' %}#}
+{#    {% endblock %}#}
+{##}
+{#{% endif %}#}

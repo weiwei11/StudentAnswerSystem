@@ -1,0 +1,804 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-08 23:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\StudentAnswerApp\filters.py:59
+msgid "unread"
+msgstr ""
+
+#: .\StudentAnswerApp\filters.py:60
+msgid "read"
+msgstr ""
+
+#: .\StudentAnswerApp\filters.py:63
+msgid "All"
+msgstr ""
+
+#: .\StudentAnswerApp\filters.py:64
+msgid "Level"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:22
+msgid "secrecy"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:23
+msgid "male"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:24
+msgid "female"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:27
+msgid "Nickname"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:28
+msgid "Gender"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:29
+msgid "Age"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:34
+msgid "Person Information"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:42
+msgid "Content Description"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:43
+#: .\StudentAnswerApp\templates\widgets\class.html:32
+msgid "Creator"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:45 .\StudentAnswerApp\models.py:89
+#: .\StudentAnswerApp\models.py:134 .\StudentAnswerApp\models.py:150
+#: .\StudentAnswerApp\models.py:178 .\StudentAnswerApp\models.py:231
+#: .\StudentAnswerApp\models.py:262
+msgid "Created Date Time"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:47 .\StudentAnswerApp\models.py:91
+msgid "Accessible Groups"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:48
+msgid "Share To Classes"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:53 .\StudentAnswerApp\models.py:110
+#: .\StudentAnswerApp\models.py:147
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:80
+msgid "Question"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:61
+msgid "choice"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:62
+msgid "gap filling"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:63
+msgid "short answer"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:64
+msgid "other"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:66 .\StudentAnswerApp\models.py:113
+#: .\StudentAnswerApp\models.py:124 .\StudentAnswerApp\models.py:164
+#: .\StudentAnswerApp\models.py:212
+msgid "Order Number"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:67 .\StudentAnswerApp\models.py:163
+#: .\StudentAnswerApp\models.py:264
+msgid "Content"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:70
+msgid "Is Auto Correction"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:71 .\StudentAnswerApp\models.py:132
+msgid "Kind"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:75
+msgid "Standard Answer"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:77
+msgid "Belong To Queston"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:80
+#: .\StudentAnswerApp\templates\widgets\sub_question.html:7
+#: .\StudentAnswerApp\templates\widgets\sub_question_and_answer.html:7
+msgid "Sub Question"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:87 .\StudentAnswerApp\models.py:229
+msgid "Name"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:92 .\StudentAnswerApp\models.py:103
+msgid "Total Score"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:95 .\StudentAnswerApp\models.py:180
+msgid "Examination Paper"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:99 .\StudentAnswerApp\models.py:233
+#: .\StudentAnswerApp\templates\saa\class_detail.html:12
+#: .\StudentAnswerApp\templates\widgets\class.html:35
+msgid "Description"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:101
+msgid "Belong To Examination Paper"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:102 .\StudentAnswerApp\models.py:190
+#: .\StudentAnswerApp\models.py:199
+msgid "Group Order Number"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:106
+msgid "Examination Question Group"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:111 .\StudentAnswerApp\models.py:121
+#: .\StudentAnswerApp\models.py:209
+msgid "Score"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:112 .\StudentAnswerApp\models.py:198
+msgid "Belong To Group"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:116
+msgid "Examination Question"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:120
+msgid "SubQuestion"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:123
+msgid "Belong To Examination Question"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:127
+msgid "Sub Examination Question"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:131 .\StudentAnswerApp\models.py:143
+#: .\StudentAnswerApp\models.py:216
+msgid "Examination"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:136 .\StudentAnswerApp\models.py:218
+msgid "Begin Date Time"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:137 .\StudentAnswerApp\models.py:219
+msgid "End Date Time"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:138
+msgid "Time Length"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:139
+msgid "Examinaton Paper"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:140
+msgid "Can Submit Number"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:154 .\StudentAnswerApp\models.py:200
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:69
+msgid "Answer"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:165
+msgid "Belong To Answer"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:167
+msgid "Correction Rate"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:170 .\StudentAnswerApp\models.py:208
+msgid "Sub Answer"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:181 .\StudentAnswerApp\models.py:191
+msgid "Gaven Total Score"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:184 .\StudentAnswerApp\models.py:222
+msgid "Examination Answer Paper"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:189
+msgid "Examintion Answer Group"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:194
+msgid "Examination Answer Group"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:201
+msgid "Gaven Score"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:204
+msgid "Examination Answer"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:211
+msgid "Belong To Examintion Answer"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:220
+msgid "Submit Number"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:225
+msgid "User Examination Record"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:235
+msgid "Class Examination Papers"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:237
+msgid "Class Examintions"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:238
+msgid "Class Member"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:243
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:91
+msgid "Class"
+msgstr ""
+
+#: .\StudentAnswerApp\models.py:263
+msgid "Related Question"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\avatar\change.html:10
+msgid "Avatar change"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\avatar\change.html:18
+msgid "Your current avatar: "
+msgstr ""
+
+#: .\StudentAnswerApp\templates\avatar\change.html:21
+msgid "You haven't uploaded an avatar yet. Please upload one now."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\avatar\change.html:27
+msgid "Choose new Default"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\avatar\change.html:36
+msgid "Upload New Image"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\base\base.html:65
+#: .\StudentAnswerApp\templates\base\base.html:70
+msgid "search"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\activation_complete.html:5
+msgid "Activation complete"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\logged_out.html:6
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\logged_out.html:8
+msgid "Log in again"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\login.html:5
+#: .\StudentAnswerApp\templates\widgets\navbar.html:217
+msgid "Login"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\login.html:7
+msgid "Please login"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\login.html:26
+msgid "Lost password?"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_done.html:3
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:4
+msgid "Documentation"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_done.html:3
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:4
+msgid "Change password"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_done.html:3
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:4
+msgid "Log out"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_done.html:14
+msgid "Your password was changed."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:7
+#: .\StudentAnswerApp\templates\registration\password_reset_complete.html:6
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:6
+#: .\StudentAnswerApp\templates\registration\password_reset_done.html:6
+#: .\StudentAnswerApp\templates\saa\home.html:4
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:65
+msgid "Home"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:8
+msgid "Password change"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:23
+msgid "Please correct the error below."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:25
+msgid "Please correct the errors below."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:30
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:57
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:24
+msgid "Change my password"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_complete.html:7
+#: .\StudentAnswerApp\templates\registration\password_reset_done.html:7
+msgid "Password reset"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_complete.html:16
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_complete.html:18
+msgid "Log in"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:17
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:21
+msgid "New password:"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:23
+msgid "Confirm password:"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:29
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_done.html:15
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_done.html:17
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_form.html:11
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_reset_form.html:18
+msgid "Reset my password"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\register.html:8
+#: .\StudentAnswerApp\templates\registration\registration_form.html:8
+msgid "Create an accout"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\register.html:10
+#: .\StudentAnswerApp\templates\registration\registration_form.html:10
+msgid "Create an account"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\register.html:15
+#: .\StudentAnswerApp\templates\registration\registration_form.html:14
+msgid "Create the account"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\registration_complete.html:5
+msgid "Registration complete"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\answer_create.html:25
+#: .\StudentAnswerApp\templates\widgets\comment_form.html:44
+msgid "submit"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\answer_list.html:10
+msgid "No answer!"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\answer_list.html:13
+msgid "No answer"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\class_create.html:4
+#: .\StudentAnswerApp\templates\saa\class_create.html:10
+msgid "Create class"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\class_create.html:18
+msgid "create"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\class_detail.html:15
+msgid "Members"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\class_detail.html:31
+msgid "Class Share"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\class_detail.html:38
+msgid "empty!"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\class_list.html:10
+#: .\StudentAnswerApp\templates\saa\class_list.html:13
+msgid "No class!"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\home.html:31
+msgid "Question Rank"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\home.html:42
+#: .\StudentAnswerApp\templates\saa\home.html:47
+#: .\StudentAnswerApp\templates\saa\question_list.html:11
+#: .\StudentAnswerApp\templates\saa\question_list.html:14
+msgid "No question!"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:4
+#: .\StudentAnswerApp\templates\widgets\navbar.html:202
+msgid "Notification"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:16
+msgid "Notifications Box"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:19
+msgid "Search description"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:112
+msgid "level"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:113
+msgid "actor"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:114
+msgid "verb"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:115
+msgid "action"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:116
+msgid "to"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:117
+msgid "target"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:118
+msgid "description"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:119
+msgid "time"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:143
+#: .\StudentAnswerApp\templates\saa\notification.html:166
+#: .\StudentAnswerApp\templates\saa\notification.html:180
+msgid "Mark as read"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:145
+#: .\StudentAnswerApp\templates\saa\notification.html:167
+#: .\StudentAnswerApp\templates\saa\notification.html:175
+msgid "Mark as unread"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\notification.html:151
+msgid "Your notifications box is empty!"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\question_create.html:4
+msgid "Create question"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\question_create.html:14
+msgid "Question create"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\question_create.html:20
+msgid "Whole description"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\question_create.html:50
+msgid "Add another"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\question_create.html:54
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:74
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:85
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:96
+msgid "Create"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\user_information.html:5
+msgid "User Information"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\user_information.html:14
+#: .\StudentAnswerApp\templates\widgets\navbar.html:191
+msgid "Profile"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\user_information.html:21
+msgid "Change your avatar"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\saa\user_information.html:25
+msgid "save"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\answer.html:9
+#: .\StudentAnswerApp\templates\widgets\sub_question_and_answer.html:13
+msgid "question"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\answer.html:15
+#: .\StudentAnswerApp\templates\widgets\question.html:35
+#: .\StudentAnswerApp\templates\widgets\sub_question_and_answer_form.html:20
+msgid "standard answer"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\answer.html:22
+msgid "question detail"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\class.html:31
+msgid "No."
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\class.html:33
+msgid "Created Date"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\class.html:34
+msgid "Class Size"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\class.html:43
+msgid "join"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\comment_form.html:21
+msgid "your name"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\comment_form.html:26
+msgid "your email"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\comment_form.html:32
+msgid "write your comment"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\comment_form.html:50
+msgid "send comment after login"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\comment_list.html:5
+msgid "Comments"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\comment_list.html:8
+msgid "Add comment"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\comment_list.html:21
+#: .\StudentAnswerApp\templatetags\extend_filters.py:16
+msgid "at"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\comment_list.html:28
+msgid "No comment! Write your own comment?"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:73
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:84
+msgid "History"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:95
+msgid "My"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:97
+msgid "Join"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:103
+msgid "Favorite"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:107
+msgid "Student Answer Web"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:136
+msgid "You have"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:137
+msgid "unread notification"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:142
+msgid "See all notifications"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:175
+msgid "Go"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:197
+msgid "Password"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:197
+msgid "change"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:207
+msgid "Logout"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:221
+msgid "Register"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\question.html:21
+msgid "Share Classes"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\question.html:28
+msgid "Sub Question Sum"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\question.html:29
+msgid "User Favorite Total"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\question.html:38
+msgid "my answer"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\question.html:41
+msgid "add answer"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\sub_question_and_answer.html:16
+msgid "answer"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\widgets\sub_question_and_answer_form.html:4
+msgid "sub question"
+msgstr ""
+
+#: .\StudentAnswerApp\templatetags\extend_filters.py:17
+msgid "created by"
+msgstr ""
+
+#: .\StudentAnswerApp\views\views.py:347
+msgid ""
+"You isn't in this class. so you haven't permission view this class of detail."
+msgstr ""

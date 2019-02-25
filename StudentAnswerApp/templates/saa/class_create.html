@@ -1,0 +1,24 @@
+{% extends 'base/base_form.html' %}
+{% load i18n static crispy_forms_tags %}
+
+{% block title %}{% trans 'Create class' %}{% endblock %}
+
+{% block extrastyle %}
+    {{ form.media.css }}
+{% endblock %}
+
+{% block form-title %}{% trans 'Create class' %}{% endblock %}
+{% block form-action %}{% url 'saa:class_create' %}{% endblock %}
+{% block form-content %}
+    {{ form | crispy }}
+
+{#    <input name="" class="tagsinput" value="Flat,Design,Lab,Clean" style="display: none;">#}
+
+
+    <input type="submit" value="{% trans 'create' %}" class="btn btn-primary btn-lg btn-block">
+{% endblock %}
+{% block extrajs %}
+    {{ form.media.js }}
+{#    <script type="text/javascript" src="{% static 'saa/js/jquery.tagsinput.js' %}"></script>#}
+{#    <script type="text/javascript" src="{% static 'saa/js/form-component.js' %}"></script>#}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base/base_form.html" %}
+{% load i18n static crispy_forms_tags %}
+
+
+{% block title %}{% trans 'Login' %}{% endblock %}
+
+{% block form-heading-content %}{% trans 'Please login' %}{% endblock %}
+{% block form-action %}{% url 'saa:login' %}{% endblock %}
+{% block form-content %}
+{#        {% if form.errors %}#}
+{#        <p>Your username and password didn't match. Please try again.</p>#}
+{#        {% endif %}#}
+{##}
+{#        {% if next %}#}
+{#            {% if user.is_authenticated %}#}
+{#            <p>Your account doesn't have access to this page. To proceed,#}
+{#            please login with an account that has access.</p>#}
+{#            {% else %}#}
+{#            <p>Please login to see this page.</p>#}
+{#            {% endif %}#}
+{#        {% endif %}#}
+
+    {{ form | crispy }}
+    <input type="submit" value="login" class="btn btn-lg btn-primary btn-block" />
+    <input type="hidden" name="next" value="{% url 'saa:index' %}" />
+    <p><a href="{% url 'saa:password_reset' %}">{% trans 'Lost password?' %}</a></p>
+{% endblock %}

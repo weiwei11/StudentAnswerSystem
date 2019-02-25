@@ -1,0 +1,39 @@
+{% extends "base/base.html" %}
+{% load i18n static crispy_forms_tags %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'saa/css/custom/form.css' %}">
+{% endblock %}
+
+{#{% block content_title_h %}#}
+{#    {% block form-heading %}#}
+{#        <h2 class="text-center form-heading">#}
+{#            {% block form-heading-content %}#}
+{#            {% endblock %}#}
+{#        </h2>#}
+{#    {% endblock %}#}
+{#{% endblock %}#}
+{% block content %}
+    <section class="panel">
+        <header class="panel-heading">
+            {% block form-heading %}
+                <h3>{% block form-title %}{% endblock %}</h3>
+            {% endblock %}
+        </header>
+        <div class="panel-body">
+            {% block form %}
+                <form enctype="multipart/form-data" method="post" action="{% block form-action %}{% endblock %}"
+                      class="form" {% block form-extra-attr %}{% endblock %}>
+                    {% csrf_token %}
+                    {% block form-content %}
+
+                    {% endblock %}
+                </form>
+            {% endblock %}
+            {% block extra-content %}
+
+            {% endblock %}
+        </div>
+    </section>
+
+{% endblock %}

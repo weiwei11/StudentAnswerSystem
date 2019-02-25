@@ -1,0 +1,26 @@
+{% extends 'base/base.html' %}
+{% load i18n static comments tagging_tags %}
+
+{#{% block title %}#}
+{#    {% trans 'Question Detail' %}#}
+{#{% endblock %}#}
+{#{% block content_title %}#}
+{##}
+{#{% endblock %}#}
+{#{% block content_title_h %}{{ question.id }}{% endblock %}#}
+{% block content %}
+    <div class="panel-group panelm-bot20" id="accordion">
+    {% include 'widgets/question.html' %}
+    {% for sub_question in question.sub_questions.all %}
+        {% include 'widgets/sub_question.html' %}
+    {% endfor %}
+    {% include 'widgets/comment_list.html' with comment_object=question %}
+    </div>
+
+    {#    {% include 'widgets/comment_form.html' %}#}
+{% endblock %}
+{% block extrajs %}
+    {{ block.super }}
+    {% include 'widgets/js/favorite.html' %}
+    {#    <script type="text/javascript" src="{% static 'saa/js/question_comment.js' %}"></script>#}
+{% endblock %}

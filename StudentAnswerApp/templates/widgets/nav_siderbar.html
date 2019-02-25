@@ -1,0 +1,109 @@
+{% load i18n %}
+
+{#<aside id="sidebar" class="col-sm-3 col-md-2 sidebar">#}
+{#    {% block sidebar %}#}
+{#        <!-- sidebar menu start-->#}
+{#        <ul class="nav nav-sidebar" style="display: block;">#}
+{#            {% block navbar %}#}
+{#                <li class="{% block nav-link-home %}{% endblock %}">#}
+{#                    <a href="{% url 'saa:index' %}">#}
+{#                        <i class="fa fa-home fa-lg"></i>#}
+{#                        <span>{% trans 'Home' %}</span></a></li>#}
+{#                <li class="{% block nav-link-answer_history %}{% endblock %} sub-menu">#}
+{#                    <a href="javascript:;">#}
+{#                        <i class="fa fa-pencil fa-lg"></i>#}
+{#                        <span>{% trans 'Answer' %}</span>#}
+{#                        <span class="arrow"></span>#}
+{#                    </a>#}
+{#                    <ul class="sub">#}
+{#                        <li><a href="{% url 'saa:answer_history' %}">{% trans 'History' %}</a></li>#}
+{#                        <li><a href="{% url 'saa:question_list' %}">{% trans 'Create' %}</a></li>#}
+{#                    </ul>#}
+{#                </li>#}
+{#                <li class="sub-menu">#}
+{#                    <a href="javascript:;">#}
+{#                        <i class="fa fa-question fa-lg"></i>#}
+{#                        <span>{% trans 'Question' %}</span>#}
+{#                        <span class="arrow"></span>#}
+{#                    </a>#}
+{#                    <ul class="sub">#}
+{#                        <li><a href="{% url 'saa:question_history' %}">{% trans 'History' %}</a></li>#}
+{#                        <li><a href="{% url 'saa:question_create' %}">{% trans 'Create' %}</a></li>#}
+{#                    </ul>#}
+{#                </li>#}
+{#                <li class="{% block nav-link-classes %}{% endblock %} sub-menu">#}
+{#                    <a href="javascript:;">#}
+{#                        <i class="fa fa-book fa-lg"></i>#}
+{#                        <span>{% trans 'Class' %}</span>#}
+{#                        <span class="arrow"></span>#}
+{#                    </a>#}
+{#                    <ul class="sub">#}
+{#                        <li><a href="{% url 'saa:class_in' %}">{% trans 'My' %}</a></li>#}
+{#                        <li><a href="{% url 'saa:class_create' %}">{% trans 'Create' %}</a></li>#}
+{#                        <li><a href="{% url 'saa:class_join' %}">{% trans 'Join' %}</a></li>#}
+{#                    </ul>#}
+{#                </li>#}
+{#                <li class="{% block nav-link-recommend %}{% endblock %}">#}
+{#                    <a href="{% url 'saa:recommend' %}">#}
+{#                        <i class="fa fa-thumbs-up fa-lg"></i>#}
+{#                        <span>{% trans 'Recommend' %}</span>#}
+{#                    </a>#}
+{#                </li>#}
+{#            {% endblock %}#}
+{#        </ul>#}
+{#        <!-- sidebar menu end-->#}
+{#    {% endblock %}#}
+{#</aside>#}
+
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+            <li class="{% block nav-link-home %}{% endblock %}">
+                <a href="{% url 'saa:index' %}">
+                    <i class="fa fa-home fa-lg"></i>
+                    <span>{% trans 'Home' %}</span></a></li>
+            <li class="{% block nav-link-answer_history %}{% endblock %} sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-pencil fa-lg"></i>
+                    <span>{% trans 'Answer' %}</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub">
+                    <li><a href="{% url 'saa:answer_history' %}">{% trans 'History' %}</a></li>
+                    <li><a href="{% url 'saa:question_list' %}">{% trans 'Create' %}</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-question fa-lg"></i>
+                    <span>{% trans 'Question' %}</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub">
+                    <li><a href="{% url 'saa:question_history' %}">{% trans 'History' %}</a></li>
+                    <li><a href="{% url 'saa:question_create' %}">{% trans 'Create' %}</a></li>
+                </ul>
+            </li>
+            <li class="{% block nav-link-classes %}{% endblock %} sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-book fa-lg"></i>
+                    <span>{% trans 'Class' %}</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub">
+                    <li><a href="{% url 'saa:class_in' %}">{% trans 'My' %}</a></li>
+                    <li><a href="{% url 'saa:class_create' %}">{% trans 'Create' %}</a></li>
+                    <li><a href="{% url 'saa:class_join' %}">{% trans 'Join' %}</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="{% url 'saa:favorite' %}">
+                    <i class="fa fa-star fa-lg"></i>
+                    <span>{% trans 'Favorite' %}</span>
+                </a>
+            </li>
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>

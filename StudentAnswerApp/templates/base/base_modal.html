@@ -1,0 +1,29 @@
+{#<a class="btn" data-toggle="modal" href="#id_modal" data-keyboard="false" data-backdrop="false">点击"无ESC关闭，无遮蔽背景"演示</a>#}
+
+<!-- Modal -->
+<div class="modal fade {% block modal-class %}{% endblock %}" id="{% block modal-id %}{% endblock %}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">
+                    {% block modal-title %}
+
+                    {% endblock %}
+                </h4>
+            </div>
+            <div class="modal-body">
+                {% block modal-body %}
+
+                {% endblock %}
+            </div>
+            <div class="modal-footer">
+                {% block modal-footer %}
+
+                {% endblock %}
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

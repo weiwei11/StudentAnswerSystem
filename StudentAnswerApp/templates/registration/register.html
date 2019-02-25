@@ -1,0 +1,20 @@
+{% extends "base/base_form.html" %}
+{% load i18n static crispy_forms_tags %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'saa/css/custom/form.css' %}">
+{% endblock %}
+
+{% block title %}{% trans 'Create an accout' %}{% endblock %}
+
+{% block form-heading-content %}{% trans 'Create an account' %}{% endblock %}
+{% block form-action %}{% url 'saa:register' %}{% endblock %}
+{% block form-content %}
+    {% csrf_token %}
+        {{ form | crispy}}
+        <input type="submit" value="{% trans 'Create the account' %}" class="btn btn-lg btn-primary btn-block">
+{% endblock %}
+
+{#{% block extrajs %}#}
+{#    <script src="{% static 'saa/js/captcha-refresh.js' %}"></script>#}
+{#{% endblock %}#}

@@ -1,0 +1,15 @@
+{% extends "base/base_form.html" %}
+{% load i18n static crispy_forms_tags %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'saa/css/custom/form.css' %}">
+{% endblock %}
+
+{% block title %}{% trans 'Create an accout' %}{% endblock %}
+
+{% block form-heading-content %}{% trans 'Create an account' %}{% endblock %}
+{% block form-action %}{% url 'registration_complete' %}{% endblock %}
+{% block form-content %}
+    {{ form | crispy}}
+    <input type="submit" value="{% trans 'Create the account' %}" class="btn btn-lg btn-primary btn-block">
+{% endblock %}

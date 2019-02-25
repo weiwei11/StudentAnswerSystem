@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% load i18n extend_filters avatar_tags %}
+
+{% block content %}
+    <div class="panel panel-info">
+        <header class="panel-heading">
+            <strong class="pull-right">{{ class | render_creator_and_date_time }}</strong>
+            <h4 class=""><a href="">No.{{ class.id }} {{ class.name }}</a></h4>
+        </header>
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                <li>{% trans 'Description' %} : {{ class.description }}</li>
+                <li class="divider"></li>
+                <li>
+                    {% trans 'Members' %} :
+                    <ul class="list-inline">
+                        {% for member in class.class_members.all %}
+                            <li>
+                                <img src="{% avatar_url member 20 %}">
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    {% include 'widgets/tags.html' with tags_object=class %}
+                </li>
+            </ul>
+            <hr>
+            <ol>
+                {% trans 'Class Share' %} :
+                {% for question in class.question_set.all %}
+                    <li>
+                        <a href="{% url 'saa:question_detail' question.id %}">{{ question.id }}</a>
+                        <p>{{ question.content_description | safe }}</p>
+                    </li>
+                {% empty %}
+                    {% trans 'empty!' %}
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+{% endblock %}

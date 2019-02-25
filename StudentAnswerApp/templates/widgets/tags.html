@@ -1,0 +1,8 @@
+{% load tagging_tags %}
+
+{% tags_for_object tags_object as tags %}
+<i class="fa fa-tags fa-lg"></i>
+{#{{ tags }}#}
+{% for tag in tags %}
+    <span class="label label-default">{{ tag }}</span>
+{% endfor %}

@@ -1,0 +1,9 @@
+{% load i18n %}
+
+{% block content %}
+    {{ activation_key }}
+    {{ expiration_days }}
+    {{ user }}
+    {{ site }}
+    {{ scheme }}
+{% endblock %}

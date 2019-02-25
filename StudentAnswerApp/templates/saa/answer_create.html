@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% load i18n crispy_forms_tags %}
+
+{% block content_title %}
+
+{% endblock %}
+{#{% block content_title_h %}{{ question.id }}{% endblock %}#}
+{% block content %}
+    {#        <div class="panel-heading">#}
+    {#            <a class="pull-right" href="{% url 'saa:add_answer' form.question.id %}"><i class="glyphicon glyphicon-plus"></i> {% trans 'Add answer' %}</a>#}
+    {#            <h4 class="panel-title">{{ question.id }}</h4>#}
+    {#        </div>#}
+    {##}
+    {#        <div class="panel-body">#}
+    {#            <p class="pull-right">#{{ question.created_date_time | date:"Y-m-d H:i" }} {% trans 'by' %} {{ question.creator }}</p>#}
+    {#            <p>{{ question.content_description }}</p>#}
+    {#            <p class="pull-right"><a href=""><strong>{% trans 'View standard answer' %}</strong></a></p>#}
+    {#        </div>#}
+    {% include 'widgets/question.html' %}
+    <hr/>
+    <form class="panel-body" action="{% url 'saa:answer_create' question.id %}" method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        {{ sub_answers | crispy }}
+        <input type="submit" value="{% trans 'submit' %}" class="btn btn-primary btn-lg pull-right">
+    </form>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base/base_panel_without_heading.html' %}
+{% load i18n extend_filters avatar_tags %}
+
+{#{% block panel-class %}{% endblock %}#}
+{#{% block panel-heading %}#}
+{##}
+{#{% endblock %}#}
+{% block panel-body %}
+    <div class="bio-chart">
+        <div style="display:inline;width:100px;height:100px;">
+            {% if class.creator %}
+                <img class="img-circle" src="{% avatar_url class.creator 150 %}" alt="{{ creator }}">
+            {% else %}
+                <img src="" alt="None">
+            {% endif %}
+            {#            <ul class="list-unstyled list-inline">#}
+            {#                {% for member in class.class_members.all %}#}
+            {#                    <li>#}
+            {#                        <div class="text-center">#}
+            {#                            <img src="{% avatar_url member 100 %}" alt="{{ member }}"><br>#}
+            {#                            <span>{{ member }}</span>#}
+            {#                        </div>#}
+            {#                    </li>#}
+            {#                {% empty %}#}
+            {#                    {% trans 'class is empty' %}#}
+            {#                {% endfor %}#}
+            {#            </ul>#}
+        </div>
+    </div>
+    <div class="bio-desk">
+        <h4 class="terques"><strong><a href="{% url 'saa:class_detail' class.id %}">{% trans 'No.' %} {{ class.id }} {{ class.name }}</a></strong></h4>
+        <p>{% trans 'Creator' %} : {{ class.creator }}</p>
+        <p>{% trans 'Created Date' %} : {{ class.created_date_time | date:'Y-m-d H:i' }}</p>
+        <p>{% trans 'Class Size' %} : {{ class.class_members.all.count }}</p>
+        <p>{% trans 'Description' %} : {{ class.description }}</p>
+        <hr>
+        <div>
+            {% include 'widgets/tags.html' with tags_object=class %}
+        </div>
+    </div>
+    {% if user not in class.class_members.all %}
+        <a href="{% url 'saa:class_join_do' class.id %}"
+           class="pull-right btn btn-info btn-round btn-xs"><i class="fa fa-plus-circle"></i>{% trans 'join' %}</a>
+    {% endif %}
+{% endblock %}

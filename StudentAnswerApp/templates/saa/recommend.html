@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% load i18n %}
+{% block nav-link-recommend %}active{% endblock %}
+{% block content %}
+    recommend
+    {% if class_list %}
+        <ol>
+        {% for class in class_list %}
+            <li>
+
+            </li>
+        {% endfor %}
+        </ol>
+    {% endif %}
+{% endblock %}

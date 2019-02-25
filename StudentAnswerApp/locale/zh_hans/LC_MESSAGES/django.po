@@ -1,0 +1,804 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-08 23:01+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\StudentAnswerApp\filters.py:59
+msgid "unread"
+msgstr "未读"
+
+#: .\StudentAnswerApp\filters.py:60
+msgid "read"
+msgstr "已读"
+
+#: .\StudentAnswerApp\filters.py:63
+msgid "All"
+msgstr "所有"
+
+#: .\StudentAnswerApp\filters.py:64
+msgid "Level"
+msgstr "等级"
+
+#: .\StudentAnswerApp\models.py:22
+msgid "secrecy"
+msgstr "保密"
+
+#: .\StudentAnswerApp\models.py:23
+msgid "male"
+msgstr "男性"
+
+#: .\StudentAnswerApp\models.py:24
+msgid "female"
+msgstr "女性"
+
+#: .\StudentAnswerApp\models.py:27
+msgid "Nickname"
+msgstr "昵称"
+
+#: .\StudentAnswerApp\models.py:28
+msgid "Gender"
+msgstr "性别"
+
+#: .\StudentAnswerApp\models.py:29
+msgid "Age"
+msgstr "年龄"
+
+#: .\StudentAnswerApp\models.py:34
+msgid "Person Information"
+msgstr "个人信息"
+
+#: .\StudentAnswerApp\models.py:42
+msgid "Content Description"
+msgstr "内容描述"
+
+#: .\StudentAnswerApp\models.py:43
+#: .\StudentAnswerApp\templates\widgets\class.html:32
+msgid "Creator"
+msgstr "创建者"
+
+#: .\StudentAnswerApp\models.py:45 .\StudentAnswerApp\models.py:89
+#: .\StudentAnswerApp\models.py:134 .\StudentAnswerApp\models.py:150
+#: .\StudentAnswerApp\models.py:178 .\StudentAnswerApp\models.py:231
+#: .\StudentAnswerApp\models.py:262
+msgid "Created Date Time"
+msgstr "创建日期"
+
+#: .\StudentAnswerApp\models.py:47 .\StudentAnswerApp\models.py:91
+msgid "Accessible Groups"
+msgstr "可访问的组"
+
+#: .\StudentAnswerApp\models.py:48
+msgid "Share To Classes"
+msgstr "分享到班级"
+
+#: .\StudentAnswerApp\models.py:53 .\StudentAnswerApp\models.py:110
+#: .\StudentAnswerApp\models.py:147
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:80
+msgid "Question"
+msgstr "问题"
+
+#: .\StudentAnswerApp\models.py:61
+msgid "choice"
+msgstr "选择"
+
+#: .\StudentAnswerApp\models.py:62
+msgid "gap filling"
+msgstr "填空"
+
+#: .\StudentAnswerApp\models.py:63
+msgid "short answer"
+msgstr "简答"
+
+#: .\StudentAnswerApp\models.py:64
+msgid "other"
+msgstr "其它"
+
+#: .\StudentAnswerApp\models.py:66 .\StudentAnswerApp\models.py:113
+#: .\StudentAnswerApp\models.py:124 .\StudentAnswerApp\models.py:164
+#: .\StudentAnswerApp\models.py:212
+msgid "Order Number"
+msgstr "序号"
+
+#: .\StudentAnswerApp\models.py:67 .\StudentAnswerApp\models.py:163
+#: .\StudentAnswerApp\models.py:264
+msgid "Content"
+msgstr "内容"
+
+#: .\StudentAnswerApp\models.py:70
+msgid "Is Auto Correction"
+msgstr "是否自动批改"
+
+#: .\StudentAnswerApp\models.py:71 .\StudentAnswerApp\models.py:132
+msgid "Kind"
+msgstr "类别"
+
+#: .\StudentAnswerApp\models.py:75
+msgid "Standard Answer"
+msgstr "标准答案"
+
+#: .\StudentAnswerApp\models.py:77
+msgid "Belong To Queston"
+msgstr "所属的问题"
+
+#: .\StudentAnswerApp\models.py:80
+#: .\StudentAnswerApp\templates\widgets\sub_question.html:7
+#: .\StudentAnswerApp\templates\widgets\sub_question_and_answer.html:7
+msgid "Sub Question"
+msgstr "子问题"
+
+#: .\StudentAnswerApp\models.py:87 .\StudentAnswerApp\models.py:229
+msgid "Name"
+msgstr "名字"
+
+#: .\StudentAnswerApp\models.py:92 .\StudentAnswerApp\models.py:103
+msgid "Total Score"
+msgstr "总分"
+
+#: .\StudentAnswerApp\models.py:95 .\StudentAnswerApp\models.py:180
+msgid "Examination Paper"
+msgstr "试卷"
+
+#: .\StudentAnswerApp\models.py:99 .\StudentAnswerApp\models.py:233
+#: .\StudentAnswerApp\templates\saa\class_detail.html:12
+#: .\StudentAnswerApp\templates\widgets\class.html:35
+msgid "Description"
+msgstr "描述"
+
+#: .\StudentAnswerApp\models.py:101
+msgid "Belong To Examination Paper"
+msgstr "所属的试卷"
+
+#: .\StudentAnswerApp\models.py:102 .\StudentAnswerApp\models.py:190
+#: .\StudentAnswerApp\models.py:199
+msgid "Group Order Number"
+msgstr "组序号"
+
+#: .\StudentAnswerApp\models.py:106
+msgid "Examination Question Group"
+msgstr "试题组"
+
+#: .\StudentAnswerApp\models.py:111 .\StudentAnswerApp\models.py:121
+#: .\StudentAnswerApp\models.py:209
+msgid "Score"
+msgstr "分数"
+
+#: .\StudentAnswerApp\models.py:112 .\StudentAnswerApp\models.py:198
+msgid "Belong To Group"
+msgstr "所属的组"
+
+#: .\StudentAnswerApp\models.py:116
+msgid "Examination Question"
+msgstr "试题"
+
+#: .\StudentAnswerApp\models.py:120
+msgid "SubQuestion"
+msgstr "子问题"
+
+#: .\StudentAnswerApp\models.py:123
+msgid "Belong To Examination Question"
+msgstr "所属的试题"
+
+#: .\StudentAnswerApp\models.py:127
+msgid "Sub Examination Question"
+msgstr "子试题"
+
+#: .\StudentAnswerApp\models.py:131 .\StudentAnswerApp\models.py:143
+#: .\StudentAnswerApp\models.py:216
+msgid "Examination"
+msgstr "测试"
+
+#: .\StudentAnswerApp\models.py:136 .\StudentAnswerApp\models.py:218
+msgid "Begin Date Time"
+msgstr "开始日期"
+
+#: .\StudentAnswerApp\models.py:137 .\StudentAnswerApp\models.py:219
+msgid "End Date Time"
+msgstr "结束日期"
+
+#: .\StudentAnswerApp\models.py:138
+msgid "Time Length"
+msgstr "时长"
+
+#: .\StudentAnswerApp\models.py:139
+msgid "Examinaton Paper"
+msgstr "试卷"
+
+#: .\StudentAnswerApp\models.py:140
+msgid "Can Submit Number"
+msgstr "可提交次数"
+
+#: .\StudentAnswerApp\models.py:154 .\StudentAnswerApp\models.py:200
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:69
+msgid "Answer"
+msgstr "答案"
+
+#: .\StudentAnswerApp\models.py:165
+msgid "Belong To Answer"
+msgstr "所属的答案"
+
+#: .\StudentAnswerApp\models.py:167
+msgid "Correction Rate"
+msgstr "正确率"
+
+#: .\StudentAnswerApp\models.py:170 .\StudentAnswerApp\models.py:208
+msgid "Sub Answer"
+msgstr "子答案"
+
+#: .\StudentAnswerApp\models.py:181 .\StudentAnswerApp\models.py:191
+msgid "Gaven Total Score"
+msgstr "得分"
+
+#: .\StudentAnswerApp\models.py:184 .\StudentAnswerApp\models.py:222
+msgid "Examination Answer Paper"
+msgstr "答卷"
+
+#: .\StudentAnswerApp\models.py:189
+msgid "Examintion Answer Group"
+msgstr "试题答案组"
+
+#: .\StudentAnswerApp\models.py:194
+msgid "Examination Answer Group"
+msgstr "试题答案组"
+
+#: .\StudentAnswerApp\models.py:201
+msgid "Gaven Score"
+msgstr "得分"
+
+#: .\StudentAnswerApp\models.py:204
+msgid "Examination Answer"
+msgstr "试题答案"
+
+#: .\StudentAnswerApp\models.py:211
+msgid "Belong To Examintion Answer"
+msgstr "所属的试题答案"
+
+#: .\StudentAnswerApp\models.py:220
+msgid "Submit Number"
+msgstr "提交次数"
+
+#: .\StudentAnswerApp\models.py:225
+msgid "User Examination Record"
+msgstr "用户测试记录"
+
+#: .\StudentAnswerApp\models.py:235
+msgid "Class Examination Papers"
+msgstr "班级试卷"
+
+#: .\StudentAnswerApp\models.py:237
+msgid "Class Examintions"
+msgstr "班级测试"
+
+#: .\StudentAnswerApp\models.py:238
+msgid "Class Member"
+msgstr "班级成员"
+
+#: .\StudentAnswerApp\models.py:243
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:91
+msgid "Class"
+msgstr "班级"
+
+#: .\StudentAnswerApp\models.py:263
+msgid "Related Question"
+msgstr "相关问题"
+
+#: .\StudentAnswerApp\templates\avatar\change.html:10
+msgid "Avatar change"
+msgstr "头像更改"
+
+#: .\StudentAnswerApp\templates\avatar\change.html:18
+msgid "Your current avatar: "
+msgstr "你当前的头像"
+
+#: .\StudentAnswerApp\templates\avatar\change.html:21
+msgid "You haven't uploaded an avatar yet. Please upload one now."
+msgstr "你从未上传头像。现在请上传一个。"
+
+#: .\StudentAnswerApp\templates\avatar\change.html:27
+msgid "Choose new Default"
+msgstr "选择新的"
+
+#: .\StudentAnswerApp\templates\avatar\change.html:36
+msgid "Upload New Image"
+msgstr "上传新的图片"
+
+#: .\StudentAnswerApp\templates\base\base.html:65
+#: .\StudentAnswerApp\templates\base\base.html:70
+msgid "search"
+msgstr "搜索"
+
+#: .\StudentAnswerApp\templates\registration\activation_complete.html:5
+msgid "Activation complete"
+msgstr "激活完成"
+
+#: .\StudentAnswerApp\templates\registration\logged_out.html:6
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "感谢你今天花了许多时间"
+
+#: .\StudentAnswerApp\templates\registration\logged_out.html:8
+msgid "Log in again"
+msgstr "重新登录"
+
+#: .\StudentAnswerApp\templates\registration\login.html:5
+#: .\StudentAnswerApp\templates\widgets\navbar.html:217
+msgid "Login"
+msgstr "登录"
+
+#: .\StudentAnswerApp\templates\registration\login.html:7
+msgid "Please login"
+msgstr "请登录"
+
+#: .\StudentAnswerApp\templates\registration\login.html:26
+msgid "Lost password?"
+msgstr ""
+
+#: .\StudentAnswerApp\templates\registration\password_change_done.html:3
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:4
+msgid "Documentation"
+msgstr "文档"
+
+#: .\StudentAnswerApp\templates\registration\password_change_done.html:3
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:4
+msgid "Change password"
+msgstr "更改密码"
+
+#: .\StudentAnswerApp\templates\registration\password_change_done.html:3
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:4
+msgid "Log out"
+msgstr "登出"
+
+#: .\StudentAnswerApp\templates\registration\password_change_done.html:14
+msgid "Your password was changed."
+msgstr "你的密码已经更改"
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:7
+#: .\StudentAnswerApp\templates\registration\password_reset_complete.html:6
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:6
+#: .\StudentAnswerApp\templates\registration\password_reset_done.html:6
+#: .\StudentAnswerApp\templates\saa\home.html:4
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:65
+msgid "Home"
+msgstr "主页"
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:8
+msgid "Password change"
+msgstr "密码更改"
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:23
+msgid "Please correct the error below."
+msgstr "请修正以下错误。"
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:25
+msgid "Please correct the errors below."
+msgstr "请修正以下错误。"
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:30
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr "为了安全，请输入你旧密码，然后输入新密码两次，这样可以验证你的新密码是否输入正确。"
+
+#: .\StudentAnswerApp\templates\registration\password_change_form.html:57
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:24
+msgid "Change my password"
+msgstr "更改我的密码"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_complete.html:7
+#: .\StudentAnswerApp\templates\registration\password_reset_done.html:7
+msgid "Password reset"
+msgstr "密码重置"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_complete.html:16
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "你的密码已经重置。你可能需要重新登录。"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_complete.html:18
+msgid "Log in"
+msgstr "登录"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr "密码重置确认"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:17
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr "请输入你的新密码两次，这样我们可以验证输入是否正确。"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:21
+msgid "New password:"
+msgstr "新密码："
+
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:23
+msgid "Confirm password:"
+msgstr "确认密码："
+
+#: .\StudentAnswerApp\templates\registration\password_reset_confirm.html:29
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr "密码重置链接是非法的，可能是因为它已经被使用了。请重新申请一个。"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_done.html:15
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr "我们已经通过邮件帮你重置密码，如果你输入的邮箱存在。你会不久收到邮件。"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_done.html:17
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr "如果你没有收到邮件，请确定你输入的邮箱是与你的用户名绑定的。"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr "你收到这封邮件是因为你在%(site_name)s网站请求重置你的密码。"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "请转到下一个页面并且选择一个新密码："
+
+#: .\StudentAnswerApp\templates\registration\password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr "你的用户名，以防你忘记："
+
+#: .\StudentAnswerApp\templates\registration\password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "感谢使用我们的网站！"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr "%(site_name)s团队"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_form.html:11
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr "忘记密码？在下面输入你的邮箱地址，然后我们会通过邮件帮你重新设置一个。"
+
+#: .\StudentAnswerApp\templates\registration\password_reset_form.html:18
+msgid "Reset my password"
+msgstr "重置我的密码"
+
+#: .\StudentAnswerApp\templates\registration\register.html:8
+#: .\StudentAnswerApp\templates\registration\registration_form.html:8
+msgid "Create an accout"
+msgstr "创建一个账户"
+
+#: .\StudentAnswerApp\templates\registration\register.html:10
+#: .\StudentAnswerApp\templates\registration\registration_form.html:10
+msgid "Create an account"
+msgstr "创建一个账户"
+
+#: .\StudentAnswerApp\templates\registration\register.html:15
+#: .\StudentAnswerApp\templates\registration\registration_form.html:14
+msgid "Create the account"
+msgstr "创建一个账户"
+
+#: .\StudentAnswerApp\templates\registration\registration_complete.html:5
+msgid "Registration complete"
+msgstr "注册完成"
+
+#: .\StudentAnswerApp\templates\saa\answer_create.html:25
+#: .\StudentAnswerApp\templates\widgets\comment_form.html:44
+msgid "submit"
+msgstr "提交"
+
+#: .\StudentAnswerApp\templates\saa\answer_list.html:10
+msgid "No answer!"
+msgstr "没有答案！"
+
+#: .\StudentAnswerApp\templates\saa\answer_list.html:13
+msgid "No answer"
+msgstr "没有答案！"
+
+#: .\StudentAnswerApp\templates\saa\class_create.html:4
+#: .\StudentAnswerApp\templates\saa\class_create.html:10
+msgid "Create class"
+msgstr "创建班级"
+
+#: .\StudentAnswerApp\templates\saa\class_create.html:18
+msgid "create"
+msgstr "创建"
+
+#: .\StudentAnswerApp\templates\saa\class_detail.html:15
+msgid "Members"
+msgstr "成员"
+
+#: .\StudentAnswerApp\templates\saa\class_detail.html:31
+msgid "Class Share"
+msgstr "班级共享"
+
+#: .\StudentAnswerApp\templates\saa\class_detail.html:38
+msgid "empty!"
+msgstr "空！"
+
+#: .\StudentAnswerApp\templates\saa\class_list.html:10
+#: .\StudentAnswerApp\templates\saa\class_list.html:13
+msgid "No class!"
+msgstr "没有班级！"
+
+#: .\StudentAnswerApp\templates\saa\home.html:31
+msgid "Question Rank"
+msgstr "问题排名"
+
+#: .\StudentAnswerApp\templates\saa\home.html:42
+#: .\StudentAnswerApp\templates\saa\home.html:47
+#: .\StudentAnswerApp\templates\saa\question_list.html:11
+#: .\StudentAnswerApp\templates\saa\question_list.html:14
+msgid "No question!"
+msgstr "无问题！"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:4
+#: .\StudentAnswerApp\templates\widgets\navbar.html:202
+msgid "Notification"
+msgstr "通知"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:16
+msgid "Notifications Box"
+msgstr "通知盒"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:19
+msgid "Search description"
+msgstr "描述搜索"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:112
+msgid "level"
+msgstr "等级"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:113
+msgid "actor"
+msgstr "发起者"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:114
+msgid "verb"
+msgstr "动作"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:115
+msgid "action"
+msgstr "事件"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:116
+msgid "to"
+msgstr "给"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:117
+msgid "target"
+msgstr "目标"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:118
+msgid "description"
+msgstr "描述"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:119
+msgid "time"
+msgstr "时间"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:143
+#: .\StudentAnswerApp\templates\saa\notification.html:166
+#: .\StudentAnswerApp\templates\saa\notification.html:180
+msgid "Mark as read"
+msgstr "标为已读"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:145
+#: .\StudentAnswerApp\templates\saa\notification.html:167
+#: .\StudentAnswerApp\templates\saa\notification.html:175
+msgid "Mark as unread"
+msgstr "标为未读"
+
+#: .\StudentAnswerApp\templates\saa\notification.html:151
+msgid "Your notifications box is empty!"
+msgstr "你的通知盒是空的！"
+
+#: .\StudentAnswerApp\templates\saa\question_create.html:4
+msgid "Create question"
+msgstr "创建问题"
+
+#: .\StudentAnswerApp\templates\saa\question_create.html:14
+msgid "Question create"
+msgstr "问题创建"
+
+#: .\StudentAnswerApp\templates\saa\question_create.html:20
+msgid "Whole description"
+msgstr "总描述"
+
+#: .\StudentAnswerApp\templates\saa\question_create.html:50
+msgid "Add another"
+msgstr "添加另一个"
+
+#: .\StudentAnswerApp\templates\saa\question_create.html:54
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:74
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:85
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:96
+msgid "Create"
+msgstr "创建"
+
+#: .\StudentAnswerApp\templates\saa\user_information.html:5
+msgid "User Information"
+msgstr "用户信息"
+
+#: .\StudentAnswerApp\templates\saa\user_information.html:14
+#: .\StudentAnswerApp\templates\widgets\navbar.html:191
+msgid "Profile"
+msgstr "个人信息"
+
+#: .\StudentAnswerApp\templates\saa\user_information.html:21
+msgid "Change your avatar"
+msgstr "更改你的头像"
+
+#: .\StudentAnswerApp\templates\saa\user_information.html:25
+msgid "save"
+msgstr "保存"
+
+#: .\StudentAnswerApp\templates\widgets\answer.html:9
+#: .\StudentAnswerApp\templates\widgets\sub_question_and_answer.html:13
+msgid "question"
+msgstr "问题"
+
+#: .\StudentAnswerApp\templates\widgets\answer.html:15
+#: .\StudentAnswerApp\templates\widgets\question.html:35
+#: .\StudentAnswerApp\templates\widgets\sub_question_and_answer_form.html:20
+msgid "standard answer"
+msgstr "标准答案"
+
+#: .\StudentAnswerApp\templates\widgets\answer.html:22
+msgid "question detail"
+msgstr "问题详情"
+
+#: .\StudentAnswerApp\templates\widgets\class.html:31
+msgid "No."
+msgstr "No."
+
+#: .\StudentAnswerApp\templates\widgets\class.html:33
+msgid "Created Date"
+msgstr "创建日期"
+
+#: .\StudentAnswerApp\templates\widgets\class.html:34
+msgid "Class Size"
+msgstr "班级人数"
+
+#: .\StudentAnswerApp\templates\widgets\class.html:43
+msgid "join"
+msgstr "加入"
+
+#: .\StudentAnswerApp\templates\widgets\comment_form.html:21
+msgid "your name"
+msgstr "你的名字"
+
+#: .\StudentAnswerApp\templates\widgets\comment_form.html:26
+msgid "your email"
+msgstr "你的邮箱"
+
+#: .\StudentAnswerApp\templates\widgets\comment_form.html:32
+msgid "write your comment"
+msgstr "填写你的评论"
+
+#: .\StudentAnswerApp\templates\widgets\comment_form.html:50
+msgid "send comment after login"
+msgstr "登录后发表评论"
+
+#: .\StudentAnswerApp\templates\widgets\comment_list.html:5
+msgid "Comments"
+msgstr "评论"
+
+#: .\StudentAnswerApp\templates\widgets\comment_list.html:8
+msgid "Add comment"
+msgstr "添加评论"
+
+#: .\StudentAnswerApp\templates\widgets\comment_list.html:21
+#: .\StudentAnswerApp\templatetags\extend_filters.py:16
+msgid "at"
+msgstr "在"
+
+#: .\StudentAnswerApp\templates\widgets\comment_list.html:28
+msgid "No comment! Write your own comment?"
+msgstr "暂时没有评论！填写你自己的评论？"
+
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:73
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:84
+msgid "History"
+msgstr "历史"
+
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:95
+msgid "My"
+msgstr "我的"
+
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:97
+msgid "Join"
+msgstr "加入"
+
+#: .\StudentAnswerApp\templates\widgets\nav_siderbar.html:103
+msgid "Favorite"
+msgstr "收藏"
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:107
+msgid "Student Answer Web"
+msgstr "学生答题网站"
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:136
+msgid "You have"
+msgstr "你有"
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:137
+msgid "unread notification"
+msgstr "未读通知"
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:142
+msgid "See all notifications"
+msgstr "查看所有的通知"
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:175
+msgid "Go"
+msgstr "确认"
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:197
+msgid "Password"
+msgstr "密码"
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:197
+msgid "change"
+msgstr "更改"
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:207
+msgid "Logout"
+msgstr "登出"
+
+#: .\StudentAnswerApp\templates\widgets\navbar.html:221
+msgid "Register"
+msgstr "注册"
+
+#: .\StudentAnswerApp\templates\widgets\question.html:21
+msgid "Share Classes"
+msgstr "分享的班级"
+
+#: .\StudentAnswerApp\templates\widgets\question.html:28
+msgid "Sub Question Sum"
+msgstr "子问题总数"
+
+#: .\StudentAnswerApp\templates\widgets\question.html:29
+msgid "User Favorite Total"
+msgstr "用户收藏总数"
+
+#: .\StudentAnswerApp\templates\widgets\question.html:38
+msgid "my answer"
+msgstr "我的答案"
+
+#: .\StudentAnswerApp\templates\widgets\question.html:41
+msgid "add answer"
+msgstr "添加答案"
+
+#: .\StudentAnswerApp\templates\widgets\sub_question_and_answer.html:16
+msgid "answer"
+msgstr "答案"
+
+#: .\StudentAnswerApp\templates\widgets\sub_question_and_answer_form.html:4
+msgid "sub question"
+msgstr "子问题"
+
+#: .\StudentAnswerApp\templatetags\extend_filters.py:17
+msgid "created by"
+msgstr "创建者"
+
+#: .\StudentAnswerApp\views\views.py:347
+msgid ""
+"You isn't in this class. so you haven't permission view this class of detail."
+msgstr "你没有加入该班级。所有你没有权限查看班级详情。"

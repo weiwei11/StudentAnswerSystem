@@ -1,0 +1,21 @@
+{% extends 'base/base_list.html' %}
+{% load i18n %}
+
+{#{% block filter-action %}{% url %}{% endblock %}#}
+{% block list-item-content %}
+
+    {% include 'widgets/question.html' with question=obj %}
+
+{% endblock %}
+{% block list-empty %}
+    {% trans 'No question!' %}
+{% endblock %}
+{% block list-none %}
+    {% trans 'No question!' %}
+{% endblock %}
+
+{% block extrajs %}
+    {{ block.super }}
+    {% include 'widgets/js/favorite.html' %}
+    {#    <script type="text/javascript" src="{% static 'saa/js/question_comment.js' %}"></script>#}
+{% endblock %}

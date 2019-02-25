@@ -1,0 +1,230 @@
+{% load i18n avatar_tags notifications_tags %}
+
+{#<nav role="navigation" class="navbar navbar-fixed-top">#}
+{#    {% block nav %}#}
+{#        <div class="container-fluid">#}
+{#            <div class="navbar-header">#}
+{#                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">#}
+{#                    <span class="sr-only"></span>#}
+{#                    <span class="icon-bar"></span>#}
+{#                    <span class="icon-bar"></span>#}
+{#                    <span class="icon-bar"></span>#}
+{#                </button>#}
+{#                <div class="sidebar-toggle-box" id="sidebar-trigger">#}
+{#                    <div data-original-title="Toggle Navigation" data-placement="right"#}
+{#                         class="fa fa-bars fa-2x icon-bars tooltips"></div>#}
+{#                </div>#}
+{##}
+{#                <a class="navbar-brand" href="{% url 'saa:index' %}">{% trans 'Student Answer Web' %}</a>#}
+{#            </div>#}
+{#            <!-- 导航栏 -->#}
+{#            <div id="navbar" class="navbar-collapse collapse">#}
+{#                <!-- 工具条 -->#}
+{#                {% block usertools %}#}
+{#                    <ul id="user-tools" class="nav navbar-nav navbar-right">#}
+{#                        {% if has_permission %}#}
+{#                            <li class="dropdown">#}
+{#                                {% block welcome-msg %}#}
+{#                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"#}
+{#                                       aria-haspopup="true" aria-expanded="false">#}
+{#                                        <img src="{% avatar_url user 30 %}">#}
+{#                                        <strong class="username"> {% firstof user.get_short_name user.get_username %}</strong>.#}
+{#                                <span class="sr-only">(current)</span>#}
+{#                                        <b class="caret"></b>#}
+{#                                    </a>#}
+{#                                    <ul class="dropdown-menu extended logout">#}
+{#                                        <li class="log-arrow-up"></li>#}
+{#                                        <li>#}
+{#                                            <a href="{% url 'saa:user_information' %}"><i#}
+{#                                                    class="glyphicon glyphicon-user"></i> {% trans 'Profile' %}#}
+{#                                            </a>#}
+{#                                        </li>#}
+{#                                        {% if user.has_usable_password %}#}
+{#                                            <li>#}
+{#                                                <a href="{% url 'saa:password_change' %}"><i#}
+{#                                                        class="glyphicon glyphicon-pencil"></i> {% trans 'Password change' %}#}
+{#                                                </a>#}
+{#                                            </li>#}
+{##}
+{#                                            <li role="separator" class="divider"></li>#}
+{#                                            <li>#}
+{#                                                <a href="{% url 'saa:logout' %}"><i#}
+{#                                                        class="glyphicon glyphicon-log-out"></i> {% trans 'Logout' %}#}
+{#                                                </a>#}
+{#                                            </li>#}
+{#                                        {% endif %}#}
+{#                                    </ul>#}
+{#                                {% endblock %}#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="{% url 'saa:notification' %}">#}
+{#                                    <i class="fa fa-bell fa-lg"></i> {% trans 'Notification' %}#}
+{#                                    {% notifications_unread as unread_count %}#}
+{#                                    {% if unread_count %}#}
+{#                                        <i id="message-badge" class="badge">{{ unread_count }}</i>#}
+{#                                    {% endif %}#}
+{#                                    {% live_notify_badge classes='badge' %}#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li class="dropdown">#}
+{#                                <a href="{% url 'saa:message' %}">#}
+{#                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"s>#}
+{#                                    <span class="glyphicon glyphicon-envelope"></span> {% trans 'message' %}#}
+{#                                    {% notifications_unread as unread_count %}#}
+{#                                    {% if unread_count %}#}
+{#                                        <span class="badge">{{ unread_count  }}</span>#}
+{#                                    {% endif %}#}
+{#                                    {% live_notify_badge classes='badge' %}#}
+{#                                </a>#}
+{#                                {% live_notify_list classes='dropdown-menu' %}#}
+{##}
+{#                            </li>#}
+{#                        {% else %}#}
+{#                            <li><a>{% trans 'Tourist' %}</a></li>#}
+{#                            <li>#}
+{#                                <a href="{% url 'saa:login' %}">{% trans 'Login' %}</a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="{% url 'saa:register' %}">{% trans 'Register' %}</a>#}
+{#                            </li>#}
+{#                        {% endif %}#}
+{#                    </ul>#}
+{#                {% endblock %}#}
+{##}
+{#                {% block search %}#}
+{#                    {% include 'widgets/search_widget.html' %}#}
+{#                {% endblock %}#}
+{#            </div> <!--/.nav-collapse -->#}
+{#        </div>#}
+{#    {% endblock %}#}
+{#</nav>#}
+<header id="nav" role="banner" class="nav navbar-fixed-top header white-bg">
+    <div class="sidebar-toggle-box">
+        <div data-original-title="Toggle Navigation" data-placement="right"
+             class="fa fa-reorder fa-2x icon-reorder tooltips"></div>
+    </div>
+    <!--logo start-->
+    <a class="navbar-brand logo" href="{% url 'saa:index' %}"><span>{% trans 'Student Answer Web' %}</span></a>
+    <!--logo end-->
+    <div class="nav notify-row" id="top_menu">
+        <!--  notification start -->
+        <ul class="nav top-menu">
+            <!-- notification dropdown start-->
+            <li id="header_notification_bar" class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <i class="fa fa-bell-o"></i>
+                    {% notifications_unread as unread_count %}
+                    {% if unread_count %}
+                        <span id="notification-badge" class="badge bg-warning">{{ unread_count }}</span>
+                    {% endif %}
+                </a>
+                <ul class="dropdown-menu extended notification">
+                    <li class="notify-arrow notify-arrow-yellow"></li>
+                    {#                    <li>#}
+                    {#                        {% if unread_count %}#}
+                    {#                            {% if unread_count == 1 %}#}
+                    {#                                <p class="yellow">{% trans 'You only have' %} {{ unread_count }} {% trans 'unread notification' %}</p>#}
+                    {#                            {% else %}#}
+                    {#                                <p class="yellow">{% trans 'You have' %} {{ unread_count }} {% trans 'unread notifications' %}</p>#}
+                    {#                            {% endif %}#}
+                    {#                        {% else %}#}
+                    {#                            <p class="yellow">{% trans "You don't have" %} {{ unread_count }} {% trans 'unread notification' %}</p>#}
+                    {#                        {% endif %}#}
+                    {#                    </li>#}
+                    <li>
+                        {% if unread_count %}
+                            <p class="yellow">{% trans 'You have' %} <span
+                                    id="notification-badge">{{ unread_count }}</span> {% trans 'unread notification' %}
+                            </p>
+                        {% endif %}
+                    </li>
+                    <li>
+                        <a href="{% url 'saa:notification' %}">{% trans 'See all notifications' %}</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- notification dropdown end -->
+        </ul>
+        <!--  notification end -->
+    </div>
+    <div class="top-nav ">
+        <!--search & user info start-->
+        <ul class="nav pull-right top-menu">
+            <li>
+                <!-- filter -->
+                {#                {% include 'widgets/search_widget.html' %}#}
+                <button class="form-control search" data-toggle="collapse" data-target="#collapsefilter"
+                        aria-expanded="false" aria-controls="collapsefilter"></button>
+
+            </li>
+            <li>
+                <form action="{% url 'set_language' %}" method="post" class="form-inline">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}"/>
+                    <select name="language" class="form-control input-sm">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                    selected="selected"{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="{% trans 'Go' %}" class="btn btn-info"/>
+                </form>
+            </li>
+            {% if user.is_authenticated %}
+                <!-- user login dropdown start-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">
+                        <img src="{% avatar_url user 30 %}">
+                        <strong class="username"> {% firstof user.get_short_name user.get_username %}</strong>.
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout">
+                        <li class="log-arrow-up"></li>
+                        <li>
+                            <a href="{% url 'saa:user_information' %}"><i
+                                    class="glyphicon glyphicon-user"></i> {% trans 'Profile' %}
+                            </a>
+                        </li>
+                        {% if user.has_usable_password %}
+                            <li>
+                                <a href="{% url 'saa:password_change' %}">
+                                    <i class="glyphicon glyphicon-pencil"></i> {% trans 'Password' %}<br>{% trans 'change' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'saa:notification' %}">
+                                    <i class="glyphicon glyphicon-bell"></i> {% trans 'Notification' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'saa:logout' %}"><i
+                                        class="glyphicon glyphicon-log-out"></i> {% trans 'Logout' %}
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </li>
+            {% else %}
+                <li>
+                    <ul class="list-inline" style="font-size: large; margin-top: 8px">
+                        <li>
+                            <a href="{% url 'saa:login' %}">{% trans 'Login' %}</a>
+                        </li>
+                        /
+                        <li>
+                            <a href="{% url 'saa:register' %}">{% trans 'Register' %}</a>
+                        </li>
+                    </ul>
+                </li>
+            {% endif %}
+            <!-- user login dropdown end -->
+        </ul>
+        <!--search & user info end-->
+    </div>
+</header>

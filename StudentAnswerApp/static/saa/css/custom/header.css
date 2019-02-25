@@ -1,0 +1,52 @@
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+    border: 0;
+}
+
+.white-bg {
+    background: #fff;
+    border-bottom: 1px solid #f1f2f7;
+}
+
+/*--sidebar toggle---*/
+
+.sidebar-toggle-box {
+    float: left;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+
+.sidebar-toggle-box .icon-bars {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.sidebar-closed > #sidebar > ul {
+    display: none;
+}
+
+.sidebar-closed #main-content {
+    margin-left: 0;
+}
+
+.sidebar-closed #sidebar {
+    margin-left: -180px;
+}
+
+/*-- nav --*/
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 20px 15px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+ul.nav-user {
+    border: 100px solid #0f0f0f;
+    margin: 100px;
+}

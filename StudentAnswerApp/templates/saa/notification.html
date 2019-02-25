@@ -1,0 +1,191 @@
+{% extends 'base/base.html' %}
+{% load i18n notifications_tags bootstrap3 %}
+
+{% block title %}{% trans 'Notification' %}{% endblock %}
+{#{% block content_title_h %}{% trans 'Message' %}{% endblock %}#}
+
+{% block extrastyle %}
+    {{ block.super }}
+    {{ filter.form.media.css }}
+{% endblock %}
+
+{% block content %}
+    <div class="mail-box">
+        <aside class="lg-side">
+            <div class="inbox-head">
+                <h3>{% trans 'Notifications Box' %}</h3>
+                <form class="pull-right position form-inline" action="{% url 'saa:notification' %}" method="get">
+                    <div class="input-append">
+                        <input type="text" name="description" title="" placeholder="{% trans 'Search description' %}"
+                               class="form-control sr-input" id="id_description">
+                        {#                        <input type="text" placeholder="{% trans 'Search notifications' %}" class="sr-input">#}
+                        {% buttons size='small' %}
+                            <button type="submit" class="btn sr-btn tooltips"
+                                    data-placement="bottom" data-original-title="Search">
+                                {% bootstrap_icon "search" %}
+                            </button>
+                        {% endbuttons %}
+                    </div>
+                </form>
+            </div>
+            <div class="inbox-body">
+                <div class="mail-option">
+                    <form action="{% url 'saa:notification' %}" method="get" class="form-inline">
+                        {#                        {% csrf_token %}#}
+                        {#                        {% bootstrap_form filter.form %}#}
+                        <div class="chk-all">
+                            <input type="checkbox" class="mail-checkbox mail-group-checkbox">
+                        </div>
+                        {% bootstrap_field filter.form.all show_label=False size='small' %}
+                        {% bootstrap_field filter.form.level show_label=False size='small' %}
+                        {% bootstrap_field filter.form.timestamp show_label=False size='small' addon_before='<span class="glyphicon glyphicon-calendar"></span>' addon_before_class='input-group-btn' %}
+
+                        {% buttons size='small' %}
+                            <button type="submit" class="btn btn-white btn-sm tooltips"
+                                    data-placement="right" data-original-title="Refresh">
+                                {% bootstrap_icon "refresh" %}
+                            </button>
+                        {% endbuttons %}
+{#                        <ul class="unstyled inbox-pagination">#}
+{#                            <li><span>1-50 of 234</span></li>#}
+{#                            <li>#}
+{#                                <a href="#" class="np-btn"><i class="fa fa-angle-left  pagination-left"></i></a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="np-btn"><i class="fa fa-angle-right pagination-right"></i></a>#}
+{#                            </li>#}
+{#                        </ul>#}
+                    </form>
+                    {#                    <div class="chk-all">#}
+                    {#                        <input type="checkbox" class="mail-checkbox mail-group-checkbox">#}
+                    {#                        <div class="btn-group">#}
+                    {#                            <a class="btn mini all" href="#" data-toggle="dropdown">#}
+                    {#                                All#}
+                    {#                                <i class="fa fa-angle-down "></i>#}
+                    {#                            </a>#}
+                    {#                            <ul class="dropdown-menu">#}
+                    {#                                <li><a href="#"> None</a></li>#}
+                    {#                                <li><a href="#"> Read</a></li>#}
+                    {#                                <li><a href="#"> Unread</a></li>#}
+                    {#                            </ul>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+
+                    {#                    <div class="btn-group">#}
+                    {#                        <a class="btn mini tooltips" href="{% url 'saa:notification' %}" data-toggle="dropdown"#}
+                    {#                           data-placement="top"#}
+                    {#                           data-original-title="Refresh">#}
+                    {#                            <i class="fa fa-refresh"></i>#}
+                    {#                        </a>#}
+                    {#                    </div>#}
+                    {#                                        <div class="btn-group hidden-phone">#}
+                    {#                        <a class="btn mini blue" href="#" data-toggle="dropdown">#}
+                    {#                            More#}
+                    {#                            <i class="fa fa-angle-down "></i>#}
+                    {#                        </a>#}
+                    {#                        <ul class="dropdown-menu">#}
+                    {#                            <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>#}
+                    {#                            <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>#}
+                    {#                            <li class="divider"></li>#}
+                    {#                            <li><a href="#"><i class="fa fa-trash"></i> Delete</a></li>#}
+                    {#                        </ul>#}
+                    {#                    </div>#}
+                    {#                    <div class="btn-group">#}
+                    {#                        <a class="btn mini blue" href="#" data-toggle="dropdown">#}
+                    {#                            Move to#}
+                    {#                            <i class="fa fa-angle-down "></i>#}
+                    {#                        </a>#}
+                    {#                        <ul class="dropdown-menu">#}
+                    {#                            <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>#}
+                    {#                            <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>#}
+                    {#                            <li class="divider"></li>#}
+                    {#                            <li><a href="#"><i class="fa fa-trash"></i> Delete</a></li>#}
+                    {#                        </ul>#}
+                    {#                    </div>#}
+
+
+                </div>
+                <table class="table table-inbox table-hover">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th class="dont-show">{% trans 'level' %}</th>
+                        <th class="dont-show">{% trans 'actor' %}</th>
+                        <th class="dont-show">{% trans 'verb' %}</th>
+                        <th class="dont-show">{% trans 'action' %}</th>
+                        <th class="dont-show">{% trans 'to' %}</th>
+                        <th class="dont-show">{% trans 'target' %}</th>
+                        <th>{% trans 'description' %}</th>
+                        <th>{% trans 'time' %}</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for message in filter.qs %}
+                        <tr class="unread">
+                            <td class="inbox-small-cells">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            {#                                                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>#}
+                            <td class="view-message  dont-show ">
+                                <span class="label label-{{ message.level }}">{{ message.level }}</span></td>
+                            <td class="view-message  dont-show">{{ message.actor }}</td>
+                            <td class="view-message  dont-show">{{ message.verb }}</td>
+                            <td class="view-message  dont-show">{{ message.action_object }}</td>
+                            <td class="view-message  dont-show"><i class="fa fa-long-arrow-right"></i></td>
+                            <td class="view-message  dont-show">{{ message.target }}</td>
+                            <td class="view-message ">{{ message.description }}</td>
+                            <td class="view-message">{{ message.timestamp | date:'Y-m-d H:i' }}</td>
+                            <td class="view-message  text-right">
+                                <a id="{{ message.id }}"
+                                   class="mark_as_read_or_unread label label-success {% if message.unread %}unread{% else %}read{% endif %}">
+                                    {% if message.unread %}
+                                        {% trans 'Mark as read' %}
+                                    {% else %}
+                                        {% trans 'Mark as unread' %}
+                                    {% endif %}
+                                </a>
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <h4 class="error-wrapper text-warning">{% trans 'Your notifications box is empty!' %}</h4>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </aside>
+    </div>
+{% endblock %}
+
+{% block extrajs %}
+
+    {{ block.super }}
+    {{ filter.form.media.js }}
+
+    <script type="text/javascript">
+        var mark_as_read = "{% trans 'Mark as read' %}";
+        var mark_as_unread = "{% trans 'Mark as unread' %}";
+        $(document).ready(function () {
+            $(".mark_as_read_or_unread").click(function () {
+                var mark;
+                if ($(this).hasClass("unread")) {
+                    mark = "read";
+                    $(this).removeClass("unread");
+                    $(this).addClass("read");
+                    $(this).text("{% trans 'Mark as unread' %}");
+                } else {
+                    mark = "unread";
+                    $(this).removeClass("read");
+                    $(this).addClass("unread");
+                    $(this).text("{% trans 'Mark as read' %}");
+                }
+                console.log($(this).attr("id"));
+                $.get("{% url 'saa:mark_as_read_or_unread' %}", {
+                    "id": $(this).attr("id"),
+                    "read_or_unread": mark
+                });
+
+            });
+        });
+    </script>
+{% endblock %}

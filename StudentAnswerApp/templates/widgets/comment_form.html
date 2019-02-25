@@ -1,0 +1,96 @@
+{#{% extends 'base/base_panel.html' %}#}
+{% load i18n comments %}
+
+
+<div class="chat-form" >
+    {% if user.is_authenticated %}
+        {% get_comment_form for comment_object as comment_form %}
+
+        <form class="" id="comment_form" action="{% comment_form_target %}" method="post">
+            {% csrf_token %}
+
+            {# 必须的字段 #}
+            {{ comment_form.object_pk }}
+            {{ comment_form.content_type }}
+            {{ comment_form.timestamp }}
+            {{ comment_form.site }}
+            {{ comment_form.submit_date }}
+            {{ comment_form.security_hash }}
+
+            {# 用户名字段，这个后面会修改为登录用户评论，无需填这个 #}
+            <input type="hidden" id="id_name" class="" name="name" placeholder="{% trans 'your name' %}"
+                   value="{{ user.username }}"/>
+            {#        {% render_field comment_form.name placeholder="{% trans 'your name' %}" %}#}
+
+            {# 邮箱地址字段 #}
+            <input type="hidden" id="id_email" class="" name="email" placeholder="{% trans 'your email' %}"
+                   value="{{ user.email }}"/>
+
+            {# 评论内容 #}
+            <div class="input-cont ">
+                <textarea rows="6" id="id_comment" class="btn-block form-control emojione-area" name="comment"
+                          placeholder="{% trans 'write your comment' %}"></textarea>
+            </div>
+            {# 防垃圾评论 #}
+            <p style="display:none;">
+                <label for="id_honeypot">如果你在该字段中输入任何内容，你的评论就会被视为垃圾评论。</label>
+                <input type="text" name="honeypot" id="id_honeypot">
+            </p>
+
+            {# 表单按钮 #}
+            <div class="controls">
+                <div class="form-actions">
+                    <input class="btn btn-info pull-right chat-features" id="submit_btn" type="submit" name="submit"
+                           value="{% trans 'submit' %}"/>
+                    <input type="hidden" name="next" value="{% url 'saa:question_detail' question.id %}"/>
+                </div>
+            </div>
+        </form>
+    {% else %}
+        <a href="{% url 'saa:login' %}" class="btn btn-warning">{% trans 'send comment after login' %}</a>
+    {% endif %}
+</div>
+
+{#{% block panel-title %}#}
+{#    {% trans 'New comment' %}#}
+{#{% endblock %}#}
+{#{% block panel-body %}#}
+{#    {% get_comment_form for comment_object as comment_form %}#}
+{##}
+{#    <form id="comment_form" class="" action="{% comment_form_target %}" method="post">#}
+{#        {% csrf_token %}#}
+{##}
+{# 必须的字段 #}
+{#        {{ comment_form.object_pk }}#}
+{#        {{ comment_form.content_type }}#}
+{#        {{ comment_form.timestamp }}#}
+{#        {{ comment_form.site }}#}
+{#        {{ comment_form.submit_date }}#}
+{#        {{ comment_form.security_hash }}#}
+{##}
+{# 用户名字段，这个后面会修改为登录用户评论，无需填这个 #}
+{#        <input type="hidden" id="id_name" class="" name="name" placeholder="{% trans 'your name' %}"#}
+{#               value="{{ user.username }}"/>#}
+{#        {% render_field comment_form.name placeholder="{% trans 'your name' %}" %}#}
+{##}
+{# 邮箱地址字段 #}
+{#        <input type="hidden" id="id_email" class="" name="email" placeholder="{% trans 'your email' %}"#}
+{#               value="{{ user.email }}"/>#}
+{##}
+{# 评论内容 #}
+{#        <textarea rows="6" id="id_comment" class="btn-block" name="comment" placeholder="{% trans 'write your comment' %}"></textarea>#}
+{# 防垃圾评论 #}
+{#        <p style="display:none;">#}
+{#            <label for="id_honeypot">如果你在该字段中输入任何内容，你的评论就会被视为垃圾评论。</label>#}
+{#            <input type="text" name="honeypot" id="id_honeypot">#}
+{#        </p>#}
+{##}
+{# 表单按钮 #}
+{#        <div class="controls">#}
+{#            <div class="form-actions">#}
+{#                <input class="btn btn-info btn-lg" id="submit_btn" type="submit" name="submit" value="{% trans 'submit' %}"/>#}
+{#                <input type="hidden" name="next" value="{% url 'saa:question_detail' question.id %}"/>#}
+{#            </div>#}
+{#        </div>#}
+{#    </form>#}
+{#{% endblock %}#}

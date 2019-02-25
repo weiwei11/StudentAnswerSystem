@@ -1,0 +1,24 @@
+{% extends 'base/base_panel.html' %}
+{% load i18n extend_filters %}
+
+{% block panel-heading %}
+    <strong class="pull-right">{{ answer | render_creator_and_date_time }}</strong>
+    <h4 class="panel-title"><a href="{% url 'saa:question_detail' answer.question.id %}">No.{{ answer.id }}</a></h4>
+{% endblock %}
+{% block panel-body %}
+    <div class="">{% trans 'question' %} : {{ answer.question.content_description | safe }}</div>
+    <hr>
+    <div class="pull-right">
+        {% if answer.question.sub_questions.all.0.standard_answer.belong_to_answer.id %}
+            <a href="{% url 'saa:question_and_answer' answer.question.id answer.question.sub_questions.all.0.standard_answer.belong_to_answer.id %}"
+               class="btn btn-success btn-round btn-xs">
+                <i class="fa fa-eye"></i> {% trans 'standard answer' %}</a>
+        {% endif %}
+{#        <a href="{% url 'saa:question_and_answer' answer.question.id answer.question.sub_questions.all.0.standard_answer.belong_to_answer.id %}" class="btn btn-success btn-round btn-xs">#}
+{#            <i class="fa fa-eye"></i> {% trans 'standard answer' %}</a>#}
+{#        <a href="" class="btn btn-success btn-round btn-xs">#}
+{#            <i class="fa fa-eye"></i> {% trans 'standard answer' %}</a>#}
+        <a href="{% url 'saa:question_detail' answer.question.id %}" class="btn btn-success btn-round btn-xs">
+            <i class="fa fa-eye"></i> {% trans 'question detail' %}</a>
+    </div>
+{% endblock %}
